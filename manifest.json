@@ -1,0 +1,9 @@
+{
+    "name": "Extension Template",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_icon": "icons/bee.png"
+    }
+}
