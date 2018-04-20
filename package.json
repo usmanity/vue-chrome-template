@@ -5,12 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
+    "make": "",
     "test": "vue-cli-service test",
     "e2e": "vue-cli-service e2e",
     "e2e:open": "vue-cli-service e2e:open"
   },
   "dependencies": {
+    "babel-loader": "^7.1.4",
+    "fsevents": "^1.2.0",
     "vue": "^2.5.13",
+    "vue-loader": "^14.2.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -23,7 +27,7 @@
     "babel-jest": "^22.0.4",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.16"
   },
   "babel": {
     "presets": [
