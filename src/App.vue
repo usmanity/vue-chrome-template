@@ -1,34 +1,28 @@
 <template>
   <div id="app">
-    <img src="./icons/bee.png" class="bee-image">
-    <h1>{{ msg }}</h1>
+    <img src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import config from './config';
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to your chrome extension',
-      image_base: config.IMAGE_BASE,
-    }
-  },
+  components: {
+    HelloWorld
+  }
 }
 </script>
 
-<style lang="scss">
-body {
-  width: 300px;
-  height: 300px;
-}
+<style lang="less">
 #app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
-.bee-image {
-  width: 128px;
-}
 </style>
-

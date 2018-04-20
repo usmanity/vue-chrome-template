@@ -1,38 +1,61 @@
 {
   "name": "vue-chrome-template",
-  "description": "A template for getting started with Chrome extensions using Vue.js",
-  "version": "1.0.0",
-  "author": "Muhammad Usman <muhammad@usmanity.com>",
-  "license": "MIT",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
+    "e2e:open": "vue-cli-service e2e:open"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^4.5.1",
-    "vue": "^2.5.11",
-    "webpack-archive-plugin": "^3.0.0",
-    "zip-webpack-plugin": "^3.0.0"
+    "vue": "^2.5.13",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
+    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.6",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.6",
+    "@vue/cli-service": "^3.0.0-beta.6",
+    "@vue/test-utils": "^1.0.0-beta.10",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
   }
 }
